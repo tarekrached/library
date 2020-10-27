@@ -9,6 +9,8 @@ const mime = require('mime-types')
 
 const log = require('./logger')
 
+exports.folderIdsCacheKey = '::folderIds::'
+
 const layoutsDir = path.join(__dirname, '../layouts')
 exports.getTemplates = (subfolder) => {
   return (fs.readdirSync(path.join(layoutsDir, subfolder)) || [])
